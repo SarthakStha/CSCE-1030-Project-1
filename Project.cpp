@@ -7,7 +7,7 @@ using namespace std;
 
 int main (){
 
-    // user data
+    // user name data variable
     string userName;
     char userChar;
     string capitalizedName;
@@ -34,14 +34,14 @@ int main (){
     bool gameOver = false;
 
     // Display student information
-    cout << "+---------------------------------------------------+" << endl;
-    cout << "| Computer Science and Engineering                  |" << endl;
-    cout << "| CSCE 1030 - Computer Science I                    |" << endl;
-    cout << "| Milan Chaulagain mc1623 MilanChaulagain@my.unt.edu|" << endl;
-    cout << "| Prasuna Khadka pk PrasunaKhadka@my.unt.edu        |" << endl;
-    cout << "| Tarang Shiwakoti ts TarangShiwakoti@my.unt.edu    |" << endl;
-    cout << "| Sarthak Shrestha ss3926 sarthakshrestha@my.unt.edu|" << endl;
-    cout << "+---------------------------------------------------+" << endl;
+    cout << "+----------------------------------------------------+" << endl;
+    cout << "| Computer Science and Engineering                   |" << endl;
+    cout << "| CSCE 1030 - Computer Science I                     |" << endl;
+    cout << "| Milan Chaulagain mc1623 MilanChaulagain@my.unt.edu |" << endl;
+    cout << "| Prasuna Khadka pk PrasunaKhadka@my.unt.edu         |" << endl;
+    cout << "| Tarang Shiwakoti ts TarangShiwakoti@my.unt.edu     |" << endl;
+    cout << "| Sarthak Shrestha ss3926 sarthakshrestha@my.unt.edu |" << endl;
+    cout << "+----------------------------------------------------+" << endl;
 
     //User name capitalization
     cout << "Enter your name: ";
@@ -67,13 +67,11 @@ int main (){
 
     };
 
-
     // random number generation
     upperbound = (rand()% 101) + 100;
     do{
         lowerbound = (rand()% 101) + 100;
     }while( upperbound < lowerbound);
-    
     
     do{
 
@@ -162,9 +160,8 @@ int main (){
                     break;
 
                 case exit:
-
+                       // conndtion to end program
                         gameOver = true;
-                        cout << "Bye";
 
                     break;
 
@@ -173,14 +170,14 @@ int main (){
                         cout << "The choice you have selected is not valid try again";
                     
                     break;
-    }
+            }
     }while( (gameOver != true) && (userScore >= 0));
 
+        // condition to end program check
+        if (gameOver != true){
         cout << "You are out of points." << endl;
-        cout << "Bye";
-
-
+        }
+        cout << "Bye " << capitalizedName << " !!!" << endl;
 
     return 0;
-
 }
