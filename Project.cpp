@@ -9,6 +9,8 @@ int main (){
 
     // user data
     string userName;
+    char userChar;
+    string capitalizedName;
 
     // user prompt variables
     srand(time(0));
@@ -31,9 +33,41 @@ int main (){
     // First codition to end program
     bool gameOver = false;
 
+    // Display student information
+    cout << "+---------------------------------------------------+" << endl;
+    cout << "| Computer Science and Engineering                  |" << endl;
+    cout << "| CSCE 1030 - Computer Science I                    |" << endl;
+    cout << "| Milan Chaulagain mc1623 MilanChaulagain@my.unt.edu|" << endl;
+    cout << "| Prasuna Khadka pk PrasunaKhadka@my.unt.edu        |" << endl;
+    cout << "| Tarang Shiwakoti ts TarangShiwakoti@my.unt.edu    |" << endl;
+    cout << "| Sarthak Shrestha ss3926 sarthakshrestha@my.unt.edu|" << endl;
+    cout << "+---------------------------------------------------+" << endl;
+
     //User name capitalization
     cout << "Enter your name: ";
     getline(cin, userName);
+
+    for(int i= 0; i< userName.size(); i++){
+        userChar = userName.at(i);
+        if (i == 0){
+            userChar = toupper(userName.at(i));
+            capitalizedName += userChar;
+        } else{
+
+            if(userName.at(i-1) == ' '){
+                userChar = toupper(userName.at(i));
+                capitalizedName += userChar;
+            } else{
+
+                capitalizedName += userChar;
+
+            }
+
+        }
+
+    };
+
+
     // random number generation
     upperbound = (rand()% 101) + 100;
     do{
