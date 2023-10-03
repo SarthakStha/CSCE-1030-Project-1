@@ -38,8 +38,8 @@ int main (){
     cout << "| Computer Science and Engineering                   |" << endl;
     cout << "| CSCE 1030 - Computer Science I                     |" << endl;
     cout << "| Milan Chaulagain mc1623 MilanChaulagain@my.unt.edu |" << endl;
-    cout << "| Prasuna Khadka pk PrasunaKhadka@my.unt.edu         |" << endl;
-    cout << "| Tarang Shiwakoti ts TarangShiwakoti@my.unt.edu     |" << endl;
+    cout << "| Prasuna Khadka pk0777 prasunakhadka@my.unt.edu     |" << endl;
+    cout << "| Tarang Shiwakoti ts1366 TarangShiwakoti@my.unt.edu |" << endl;
     cout << "| Sarthak Shrestha ss3926 sarthakshrestha@my.unt.edu |" << endl;
     cout << "+----------------------------------------------------+" << endl;
 
