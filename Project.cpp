@@ -7,10 +7,11 @@ using namespace std;
 
 int main (){
 
-    // user name data variable
+    // username data & valid check variables
     string userName;
     char userChar;
     string capitalizedName;
+    bool validName;
 
     // user prompt variables
     srand(time(0));
@@ -43,9 +44,25 @@ int main (){
     cout << "| Sarthak Shrestha ss3926 sarthakshrestha@my.unt.edu |" << endl;
     cout << "+----------------------------------------------------+" << endl;
 
+    // Name vaild check
+
+     do{
+        validName = true;
+        cout << "Enter your name: ";
+        getline(cin, userName);
+
+        for(int i=0; i<userName.length(); i++){
+            if((isalpha(userName.at(i)) == false)  && (userName.at(i) != ' ')){
+                validName = false;
+            }
+        }
+        if(validName == false){
+            cout << "Your name can only have alphabets and spaces. Enter again." << endl;
+        }
+
+    }while(validName == false);
+
     //User name capitalization
-    cout << "Enter your name: ";
-    getline(cin, userName);
 
     for(int i= 0; i< userName.size(); i++){
         userChar = userName.at(i);
@@ -176,6 +193,8 @@ int main (){
         // condition to end program check
         if (gameOver != true){
         cout << "You are out of points." << endl;
+        }else{
+            cout << "Your final point balance is = " << userScore << endl;
         }
         cout << "Bye " << capitalizedName << " !!!" << endl;
 
